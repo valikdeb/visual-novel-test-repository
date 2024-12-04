@@ -53,7 +53,7 @@ NPC2: "Я не обижусь если ты отдашь её NPC1"
 
 #Five
 
-@if pringlesEater=="NPC"
+@if pringlesEater=="NPC1"
     NPC: "Спасибо что отдал еду мне"
     NPC: "Я отработаю"
 @else
