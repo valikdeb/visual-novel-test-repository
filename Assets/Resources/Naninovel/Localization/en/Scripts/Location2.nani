@@ -1,0 +1,57 @@
+; Russian <ru> to English <en> localization document for `Location2` naninovel script
+
+# 91c6f45
+; NPC2: "Привет, {name}! Рада тебя видеть."
+NPC2: "Hello, {name}! Glad to see you."
+
+# 8887993e
+; NPC2: "Попробуй меня одолеть в игре"
+NPC2: "Try to beat me in the game."
+
+# 86095
+; {name}: "Да, конечно!"
+{name}: "Yes, of course!"
+
+# 63366183
+; NPC2: "А ты силён"
+NPC2: "You're strong."
+
+# ea243364
+; NPC2: "Отправляйся на локацию три"
+NPC2: "Head to Location Three."
+
+# a42b7904
+; NPC2: "Сыграешь еще раз?"
+NPC2: "Want to play again?"
+
+# 9d1aafe1
+; @choice "На карту" goto:Map
+@choice "To the map" goto:Map
+
+# d8dfcb37
+; @choice "Играть еще раз" goto:.Game
+@choice "Play again" goto:.Game
+
+# 582aa5ca
+; {name}: Где же она(NPC2)?
+{name}: "Where is she (NPC2)?"
+
+# e2c4d102
+; {name}: Пожалуй стоит посмотреть на первой локации.
+{name}: "Maybe I should check the first location."
+
+# 1c472b23
+;     NPC2: "Ты спас меня от голода"
+NPC2: "You saved me from hunger."
+
+# 1d7a6d70
+;     NPC2: "Спасибо, {name}"
+NPC2: "Thank you, {name}."
+
+# 39499522
+;     NPC2: "Ты меня разочаровал"
+NPC2: "You’ve disappointed me."
+
+# 2c5e78ee
+;     NPC2: "Не приходи ко мне больше"
+NPC2: "Don’t come to me again."

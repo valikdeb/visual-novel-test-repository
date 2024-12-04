@@ -1,0 +1,57 @@
+; Russian <ru> to English <en> localization document for `Location1` naninovel script
+
+# 1c817d14
+; NPC: "Привет, {name}! Рад тебя видеть."
+NPC: "Hello, {name}! Good to see you."
+
+# 4ee08831
+; NPC: "Надеюсь, ты готов к приключениям, {name}!"
+NPC: "I hope you're ready for some adventures, {name}!"
+
+# 86095
+; {name}: "Да, конечно!"
+{name}: "Yes, of course!"
+
+# 4fe7c52f
+; NPC: "Сходи поговори с NPC2 на второй локации. Он поможет с деталями."
+NPC: "Go talk to NPC2 at the second location. He'll help with the details."
+
+# 70864103
+; NPC: "Спасибо что добыл банку принглс"
+NPC: "Thank you for fetching the Pringles can."
+
+# 515c1f5b
+; NPC: "Тебе нужно решить кто её съест"
+NPC: "You need to decide who gets to eat it."
+
+# c7c630dc
+; NPC2: "Я не обижусь если ты отдашь её NPC1"
+NPC2: "I won't mind if you give it to NPC1."
+
+# 9076b7b6
+; {name}: "Надеюсь вы поймёте мой выбор"
+{name}: "I hope you'll understand my choice."
+
+# 37421433
+; @choice "NPC1" set:pringlesEater="NPC1"
+@choice "NPC1" set:pringlesEater="NPC1"
+
+# 9e54d8dc
+; @choice "NPC2" set:pringlesEater="NPC2"
+@choice "NPC2" set:pringlesEater="NPC2"
+
+# 4ede91b1
+; @choice "Оставить себе" set:pringlesEater="player"
+@choice "Keep it for yourself" set:pringlesEater="player"
+
+# 8801230a
+;     NPC: "Спасибо что отдал еду мне"
+NPC: "Thanks for giving the food to me."
+
+# 9bdc0063
+;     NPC: "Я отработаю"
+NPC: "I'll repay you."
+
+# 8a7d069a
+;     NPC: "Ты меня разочаровал, {name}"
+NPC: "You’ve disappointed me, {name}."

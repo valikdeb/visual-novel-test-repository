@@ -1,0 +1,5 @@
+@back Location3
+@showUI BackToMapButton
+@showUI Inventory
+@showUI Pringles
+@stop

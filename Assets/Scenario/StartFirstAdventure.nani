@@ -1,0 +1,13 @@
+#Start
+@if isAdventureStarted
+    @goto Map
+@endif
+
+@input name summary: "Введите ваше имя:" 
+@stop
+
+@set questScore=1
+@set isPringlesGot=false
+@set isAdventureStarted=true
+
+@goto Location1

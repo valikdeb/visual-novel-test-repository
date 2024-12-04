@@ -1,0 +1,63 @@
+#Start
+
+@back Location1
+@char NPC
+
+@if questScore==1
+    @goto .First
+@elseif "questScore==2 || questScore==3"
+    @goto .Second
+@elseif questScore==4
+    @goto .Four
+@elseif questScore==5
+    @goto .Five
+@endif
+
+#First
+@char NPC
+
+NPC: "Привет, {name}! Рад тебя видеть."
+
+NPC: "Надеюсь, ты готов к приключениям, {name}!"
+{name}: "Да, конечно!"
+@set questScore=2
+
+#Second
+NPC: "Сходи поговори с NPC2 на второй локации. Он поможет с деталями."
+@showUI questLog
+@set questLogText="Отправляйтесь на вторую локацию"
+
+@goto Map
+
+@stop
+
+#Four
+@char NPC
+@char NPC2
+
+NPC: "Спасибо что добыл банку принглс"
+NPC: "Тебе нужно решить кто её съест"
+NPC2: "Я не обижусь если ты отдашь её NPC1"
+{name}: "Надеюсь вы поймёте мой выбор"
+
+@set questScore=4
+
+@choice "NPC1" set:pringlesEater="NPC1"
+@choice "NPC2" set:pringlesEater="NPC2"
+@choice "Оставить себе" set:pringlesEater="player"
+@set questScore=5
+@hide NPC2
+@hideUI questLog
+@stop
+
+
+#Five
+
+@if pringlesEater=="NPC"
+    NPC: "Спасибо что отдал еду мне"
+    NPC: "Я отработаю"
+@else
+    NPC: "Ты меня разочаровал, {name}"
+@endif
+
+@goto Map

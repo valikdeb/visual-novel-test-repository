@@ -1,0 +1,64 @@
+@setMemoryGameHasPlayed
+@back Location2
+
+@if questScore==5
+    @goto .Five
+@elseif "isPringlesGot && hasMemoryGamePlayed"
+    @goto .Monolog
+@elseif hasMemoryGamePlayed
+    @goto .GameHasPlayed
+@endif
+
+#Start
+
+@char NPC2
+@back Location2
+
+NPC2: "Привет, {name}! Рада тебя видеть."
+
+NPC2: "Попробуй меня одолеть в игре"
+{name}: "Да, конечно!"
+
+#Game
+@hideAll
+@startMemoryGame
+
+
+#GameHasPlayed
+
+@char NPC2
+@back Location2
+
+NPC2: "А ты силён"
+NPC2: "Отправляйся на локацию три"
+@set questScore=3
+@set questLogText="Отправляйтесь на локацию три и заберите предмет"
+NPC2: "Сыграешь еще раз?"
+@choice "На карту" goto:Map
+@choice "Играть еще раз" goto:.Game
+
+@stop
+
+
+#Monolog
+
+{name}: Где же она(NPC2)?
+{name}: Пожалуй стоит посмотреть на первой локации.
+@set questScore=4
+@set questLogText="Отправляйтесь на первую локацию"
+@goto Map
+@stop
+
+#Five
+
+@char NPC2
+
+@if pringlesEater=="NPC2"
+    NPC2: "Ты спас меня от голода"
+    NPC2: "Спасибо, {name}"
+@else
+    NPC2: "Ты меня разочаровал"
+    NPC2: "Не приходи ко мне больше"
+@endif
+
+@goto Map

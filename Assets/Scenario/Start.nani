@@ -1,0 +1,4 @@
+#Start
+
+@set isAdventureStarted=false
+@showUI MapSelection
